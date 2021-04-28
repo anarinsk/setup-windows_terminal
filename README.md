@@ -1,4 +1,4 @@
-# setup-windows_terminal
+# Setup-windows_terminal
 Setup for Windows terminal
 
 ## Basics 
@@ -69,3 +69,21 @@ Setup for Windows terminal
             "cursorColor": "#a5a2a2"
           },
 ```
+
+## 관리자로 실행하기 
+
++ WT가 처음부터 관리자로 실행되면 좋다. 
++ 그런데 WT가 UWP라서 과거와 같은 관리자 실행권한을 주지 않는다. 
++ 별도의 바로가기를 거쳐서 관리자 권한으로 실행되도록 만들 수 있다. [LINK](http://nuts4.net/post/windows-terminal-run-as-admin) 참고. 
+
+```txt
+1. Right click on your desktop, and click New -> Shortcut
+2. For the location, type in the following and click next:
+  C:\Windows\system32\cmd.exe /c start /b wt
+3. For the name, type in "Windows Terminal", and click Next.
+4. Now, right click on the new shortcut, and click Properties.
+5. On the Shortcut tab, click Advanced, and click "Run as Administrator"
+```
+
++ 현재 WT 혹은 터미날이 관리자 모드로 실행중인지 알 수 있는 방법은?
++ cmd 모드에서 `bcdedit`을 실행한다. 
